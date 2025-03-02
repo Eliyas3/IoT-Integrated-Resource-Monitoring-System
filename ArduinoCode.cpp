@@ -10,11 +10,11 @@
 
 FirebaseData firebaseData;
 
-#define DHTPIN 4 // GPIO Pin for DHT11
+#define DHTPIN 4 
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
-#define ACS712_PIN 34  // GPIO pin for ACS712
+#define ACS712_PIN 34  
 
 void setup() {
     Serial.begin(115200);
