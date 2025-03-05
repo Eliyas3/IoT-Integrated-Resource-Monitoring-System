@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Resource Monitoring</title>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+</head>
+<body>
+    <h1>IoT Resource Monitoring</h1>
+    <p>Temperature: <span id="temperature">Loading...</span> °C</p>
+    <p>Current Usage: <span id="current">Loading...</span> A</p>
+
+    <script>
+       
+        const firebaseConfig = {
+            apiKey: "your-api-key",
+            authDomain: "your-project-id.firebaseapp.com",
+            databaseURL: "https://your-project-id.firebaseio.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project-id.appspot.com",
+            messagingSenderId: "your-sender-id",
+            appId: "your-app-id"
+        };
+
+       
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+       
+        database.ref("/resource_monitor/temperature").on("value", (snapshot) => {
+            document.getElementById("temperature").innerText = snapshot.val();
+        });
+
+        database.ref("/resource_monitor/current").on("value", (snapshot) => {
+            document.getElementById("current").innerText = snapshot.val();
+        });
+    </script>
+</body>
+</html>
