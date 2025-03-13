@@ -1,0 +1,30 @@
+Voice Assistant Integration (Google Assistant / Alexa)
+Description: Integrate with Google Assistant or Alexa to query the resource status and receive voice alerts.
+
+✳️ Key Benefits:
+Hands-free operation.
+Easy accessibility for all users.
+⚙️ Implementation Idea:
+Use IFTTT (If This Then That) or Alexa Smart Home Skill to link MQTT topics with voice queries.
+Example: "Alexa, ask IoT Monitor for CPU temperature.
+
+Block Diagram : 
+
+          +-------------+             +------------+
+          |  IoT Node 1 |--WiFi/ESP-- |            |
+          +-------------+             |            |
+                                      |  Cloud     |
+          +-------------+             | (Firebase, |
+          |  IoT Node 2 |--LoRa/Mesh--|  MQTT, AI) |
+          +-------------+             |            |
+                                      +------------+
+                                             |
+                                             v
+                                   +---------------------+
+                                   | Web/Mobile Dashboard|
+                                   +---------------------+
+                                             |
+                                             v
+                                    +----------------+
+                                    | Voice Assistant|
+                                    +----------------+
