@@ -1,6 +1,7 @@
  IoT-Integrated Resource Monitoring System
 
 🔹 Overview
+
 An Operating System-based IoT project designed for real-time monitoring, analysis, and control of system resources like CPU temperature, RAM usage, and current flow. This advanced system uses ESP32/ESP8266, various sensors, MQTT, and cloud integration to ensure efficient and smart resource management. It is highly scalable, secure, and expandable with AI/ML, mobile, and voice control integrations.
 
 
